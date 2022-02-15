@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSSFile/quiz.css">
+  <title>QUIZ</title>
+</head>
+
+<body>
+  <div class="main-box custom-box ">
+    <h2>Guide lines</h2>
+    <p>Total number of questions: <span class="total-question">10</span></p>
+    <button type="button" class="btn" onclick="startQuiz()">Start QUIZ</button>
+  </div>
+  <div class="quiz-box custom-box hide">
+    <div class="question-number">
+
+    </div>
+    <div class="question-text">
+
+    </div>
+    <div class="option-container">
+
+    </div>
+    <div class="next-question-btn">
+      <button type="button" class="btn next-last-event" onclick="next()"> Next</button>
+    </div>
+  </div>
+
+  <div class="result-box custom-box hide ">
+    <h1>Quiz Result</h1>
+    <table>
+      <tr>
+        <td>Total Question</td>
+        <td><span class="total-question"></span></td>
+      </tr>
+      <td>Attempt</td>
+      <td><span class="total-attempt"></span></td>
+      </tr>
+      <td>Total Correct</td>
+      <td><span class="total-correct"></span></td>
+      </tr>
+      <td>Total Wrong</td>
+      <td><span class="total-wrong"></span></td>
+      </tr>
+      <td>Total Score</td>
+      <td><span class="total-score"></span></td>
+      </tr>
+    </table>
+    <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
+    <button type="button" class="btn" onclick="goToHome()">Home Page</button>
+    <button type="button" class="btn" onclick="responsePage()">Check Your Response</button>
+  </div>
+  <div class="response-page custom-box hide">
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>Q.No</th>
+          <th>Question</th>
+          <th>Answer</th>
+          <th>Your Choice</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+      </tbody>
+    </table>
+    <button type="button" class="btn last-btn" onclick="goToHome()">Home Page</button>
+  </div>
+  <script src="JSFiles/questions.js"></script>
+  <script src="JSFiles/app.js"></script>
+</body>
+
+</html>
